@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Serif+Armenian:wght@100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="head">
+        <video autoplay preload="false" muted>
+            <source src="IMG_6376.MP4" height="1000">
+        </video>
+        <h1 class="name1">Garik</h1>
+        <h1 class="and">&</h1>
+        <h1 class="name2">Ani</h1>
+        <!-- <h1 class="date">26 . 09 . 2026</h1> -->
+    </div>
+    <div class="au">
+        <audio id="audioElement" loop class="audio">
+            <source src="Lady Gaga, Bruno Mars - Die With A Smile.mp3" type="audio/mpeg" />
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
+        <div class="audio-controls">
+            <button id="audiobtnRef" class="audiobtn">
+                <img id="audioImg" src="Pause.png" alt="Audio Button" width="60px">
+            </button>
+        </div>
+
+    </div>
+    <p class="header _anim-items">Բացահայտեք օրը՝ մաքրելով այն</p>
+    <div class="coins">
+        <div class="date">
+            <h1 class="num">13</h1>
+            <canvas class="canvas" height="100" width="100"></canvas>
+        </div>
+        <div class="date">
+            <h1 class="num">09</h1>
+            <canvas class="canvas" height="100" width="100"></canvas>
+        </div>
+        <div class="date">
+            <h1 class="num">26</h1>
+            <canvas class="canvas" height="100" width="100"></canvas>
+        </div>
+    </div>
+    <div class="later _anim-items">
+        <p class="lng-latetext1">Սիրելի' հյուրեր,</p>
+        <p class="lng-latetext2">Ցանկանում ենք Ձեզ հետ կիսել մեր <br> կյանքի կարևորագույն օրերից մեկը։ <br>
+            Մեծ ուրախությամբ հրավիրում ենք Ձեզ <br> մեր նշանադրության արարողությանը։<br>
+        </p>
+        <span class="d">13.09.2026</span>
+    </div>
+    <div class="maps">
+        <h1 class="mapheader lng-maph">Օրակարգ</h1>
+        <div class="card _anim-items">
+            <img src="3.png" class="placeimg" alt="">
+            <div class="placetexts">
+                <p class="placetext lng-placetext1">
+                    <span class="placespan">
+                        Պսակադրության արարողություն
+                    </span><br>
+                    Սուրբ Գայանե եկեղեցի<br>
+                    Հասցե ` Վաղարշապատ,
+                </p>
+            </div>
+            <a href="https://maps.app.goo.gl/AYfcqAk9qrbgjvKF8" target="_blank" class="map lng-mapt">Քարտեզ</a>
+        </div>
+    </div>
+    <div class="imgs">
+        <img class="line" src="Group 36718.png" alt="">
+    </div>
+    <div class="imgs">
+        <img class="tow" src="tow.png" alt="">
+    </div>
+    <div class="long">
+        <p class="pltext">Արարողությունը տեղի կունենա</p>
+        <div class="card _anim-items">
+            <div class="placetexts">
+                <p class="platext lng-placetext1">
+                    <span class="sspan">
+                        Ռոդես (Նոր Դվին)
+                    </span><br>
+                    Հասցե ` Վաղարշապատ(Էջմիածին), Աշտարակի խճուղի 1/1 
+                </p>
+            </div>
+            <a href="https://maps.app.goo.gl/deHQJJUc3Twpngts7" target="_blank" class="m lng-mapt">Քարտեզ</a>
+            <div class="t">
+                ԺԱՄԸ`<span id="t">
+                    17:30 <br>
+                    13.09.2026
+                </span>
+
+            </div>
+        </div>
+    </div>
+    <div class="timer _anim-items">
+        <h1 class="lng-timerhead">Մնացել է ...</h1>
+        <div class="times _anim-items" id="timerContainer">
+            <div class="time-unit">
+                <div id="days" class="number">00</div>
+                <div class="timeName lng-days">ՕՐ</div>
+            </div>
+            <div class="time-unit">
+                <div id="hours" class="number">00</div>
+                <div class="timeName lng-hours">ԺԱՄ</div>
+            </div>
+            <div class="time-unit">
+                <div id="minutes" class="number">00</div>
+                <div class="timeName lng-minutes">ՐՈՊԵ</div>
+            </div>
+            <div class="time-unit">
+                <div id="seconds" class="number">00</div>
+                <div class="timeName lng-seconds">ՎՐԿ</div>
+            </div>
+        </div>
+    </div>
+    <div class="cars">
+        <p class="cart">Մինչ մեր հեքիաթը սկսվի</p>
+        <div>
+            <img class="car" src="car.png" alt="">
+        </div>
+        <p class="cart">Սքանավորեք՝ օրվա լուսանկարները ավելացնելու համար</p>
+    </div>
+    <div class="qr">
+        <img src="qr.png" alt="" id="qr">
+    </div>
+    <div class="love">
+    </div>
+    <div class="b">
+        <div class="c">
+            <div class="ayan">
+                <h2 class="lng-ayant1">Կայքը պատրաստել է</h2>
+                <h6 class="lng-ayant1">սեղմիր այստեղ</h6>
+                <a href="https://www.ayandesign.am/#home" target="_blank">
+                    <img class="logo" src="logo.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

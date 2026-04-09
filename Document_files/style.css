@@ -1,0 +1,710 @@
+body {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+/*Fonts****************************************************************************************************************************************/
+
+@font-face {
+    font-family: "Kotayk";
+    src: url("Kotayk-Italic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Vrdznagir";
+    src: url("Vrdznagir.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "KotaykR";
+    src: url("Kotayk-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.cormorant {
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.noto-sans-armenian {
+    font-family: "Noto Sans Armenian", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/*head****************************************************************************************************************************************/
+
+.head {
+    margin: 0 auto;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    max-width: 480px;
+    overflow: hidden;
+    padding: 0;
+}
+
+video {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+h1 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 200;
+}
+
+.name1.act {
+    animation: text1 1s linear forwards;
+}
+
+.name1 {
+    width: 200px;
+    font-size: 78px;
+    position: absolute;
+    top: 31%;
+    left: -80%;
+    transform: translate(-5%, -5%);
+    color: #5C2018;
+    overflow: visible;
+}
+
+.and {
+    font-size: 78px;
+    position: absolute;
+    top: -35%;
+    left: 44%;
+    transform: translateY(-50%);
+    color: #5C2018;
+}
+
+.and.act {
+    animation: text2 1s linear forwards;
+}
+
+.name2.act {
+    animation: text3 1s linear forwards;
+}
+
+.name2 {
+    font-size: 78px;
+    position: absolute;
+    top: 50%;
+    left: -120%;
+    transform: translate(-5%, -5%);
+    color: #5C2018;
+}
+
+
+@keyframes text1 {
+    from {
+        left: -120%;
+    }
+
+    to {
+        left: 29%;
+    }
+}
+
+@keyframes text2 {
+    from {
+        top: -35%;
+    }
+
+    to {
+        top: 45%;
+    }
+}
+
+@keyframes date {
+    from {
+        top: -35%;
+    }
+
+    to {
+        top: 65%;
+    }
+}
+
+@keyframes text3 {
+    from {
+        left: -120%;
+    }
+
+    to {
+        left: 33%;
+    }
+}
+
+/*Coins****************************************************************************************************************************************/
+
+.canvas {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    touch-action: none;
+    position: absolute;
+
+}
+
+.date {
+    position: relative;
+    width: 105px;
+    height: 105px;
+}
+
+.num {
+    font-size: 59PX;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.coins {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    transition: 1s;
+}
+
+.coins.active {
+    transform: translateY(-5%);
+    opacity: 1;
+}
+
+.header {
+    margin-top: 60px;
+    font-weight: 100;
+    font-family: "Noto Sans Armenian", sans-serif;
+    color: #5C2018;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-5%);
+    transition: 1s;
+}
+
+.header.active {
+    transform: translateY(-5%);
+    opacity: 1;
+}
+
+/*Audio****************************************************************************************************************************************/
+
+.au {
+    margin: auto;
+    margin-top: 30px;
+    max-width: 480px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-controls {
+    position: relative;
+}
+
+.audiobtn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    z-index: 1000 !important;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: none !important;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.audiobtn:hover {
+    opacity: 1;
+    transform: scale(1.1) !important;
+}
+
+/*Later****************************************************************************************************************************************/
+
+.later {
+    background-image: url(Background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto;
+    /* margin-top: 80px; */
+    max-width: 480px;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: black;
+    transform: translateY(-20%);
+    opacity: 0;
+    transition: 1s;
+    z-index: 12;
+}
+
+.d {
+    font-family: "Great Vibes";
+    font-size: 36px;
+}
+
+.later.active {
+    transform: translateY(-0%);
+    opacity: 1;
+}
+
+.lng-latetext1 {
+    font-family: 'Kotayk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 80%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #5C2018;
+}
+
+.lng-latetext2 {
+    /* margin-top: 27px; */
+    color: #5C2018;
+    font-family: "Noto Sans Armenian", sans-serif;
+    transform: translateY(-5%);
+    font-size: 17px;
+    font-weight: 100;
+}
+
+/*Maps****************************************************************************************************************************************/
+
+.maps {
+    margin: auto;
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+    z-index: 12;
+    color: #5C2018;
+}
+
+.place {
+    position: relative;
+    max-width: 480px;
+    width: 100%;
+    min-height: 300px;
+    height: 320px;
+    z-index: 16;
+}
+
+#img {
+    margin-top: 10px;
+}
+
+.placeimg {
+    max-width: 100px;
+    width: 100%;
+    height: 120px;
+    margin: 10px;
+    z-index: 9;
+}
+
+.placetexts {
+    margin: auto;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+}
+
+.placetext {
+    font-size: 18px;
+    font-family: "Bruney";
+    font-weight: 400;
+}
+
+.placespan {
+    font-size: 18px;
+    font-weight: 900;
+    font-family: "Noto sans Armenian";
+}
+
+.card {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(-5%);
+    transition: 1s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.map {
+    text-align: center;
+    border: 1px solid #5C2018;
+    padding: 15px 10px;
+    border-radius: 10px;
+    max-width: 280px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.mapheader {
+    margin-top: 40px;
+    font-size: 17px;
+    font-family: "Kotayk";
+}
+
+.card.active {
+    transform: translateY(-5%);
+    opacity: 1;
+}
+
+/*imgs****************************************************************************************************************************************/
+
+.imgs {
+    margin: auto;
+    max-width: 480px;
+}
+
+.line {
+    margin: auto;
+    overflow: hidden;
+    max-width: 480px;
+    width: 100%;
+    height: 70.25px;
+}
+
+.tow {
+    margin: auto;
+    overflow: hidden;
+    max-width: 480px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: -20%;
+}
+
+/*Long****************************************************************************************************************************************/
+
+.long {
+    margin: auto;
+    max-width: 480px;
+    width: 100%;
+    height: 660px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    background-image: url(long.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    color: #5C2018;
+}
+
+.m {
+    text-align: center;
+    border: 1px solid #5C2018;
+    padding: 15px 10px;
+    border-radius: 10px;
+    max-width: 220px;
+    height: 15px;
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.pltext {
+    font-size: 19px;
+    font-family: "Noto Sans Armenian", sans-serif;
+    font-weight: 100;
+    color: #5C2018;
+    margin-bottom: 50px;
+}
+
+.platext {
+    display: flex;
+    flex-direction: column;
+    font-family: "Noto Sans Armenian", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.sspan {
+    font-size: 27px;
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.t {
+    color: #5C2018;
+    font-family: "Kotayk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 23px;
+}
+
+#t {
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 33px;
+}
+
+/*Timer****************************************************************************************************************************************/
+
+.times {
+    max-width: 480px;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.time-untit {
+    max-height: 50px;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: #5C2018 2px solid;
+    border-radius: 5px;
+    font-size: 26px;
+    font-weight: 100;
+    letter-spacing: 5px;
+    font-family: "Cormorant Garamond";
+    margin-bottom: 15px;
+}
+
+.timeName {
+    font-size: 20px;
+    font-family: "KotaykR";
+    font-weight: 100;
+}
+
+.times.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.timerhead {
+    font-family: "Bruney";
+    font-weight: 800;
+}
+
+.timer {
+    margin: auto;
+    margin-top: -10%;
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: 1s;
+    z-index: 12;
+}
+
+.timer.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.lng-timerhead {
+    font-family: "KotaykR";
+    color: #5C2018;
+}
+
+/*Car****************************************************************************************************************************************/
+
+.cars {
+    margin: auto;
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.car {
+
+    overflow: hidden;
+    width: 90px;
+    height: 100px;
+}
+
+.cart {
+    text-align: center;
+    color: #5C2018;
+    font-family: "Noto Sans Armenian", sans-serif;
+}
+
+/*QR*/
+
+.qr {
+    max-width: 380px;
+    margin: auto;
+}
+
+#qr {
+    margin: auto;
+    max-width: 380px;
+    width: 100%;
+}
+
+/*Void****************************************************************************************************************************************/
+
+.void {
+    max-width: 480px;
+    height: 100vh;
+}
+
+/*Love****************************************************************************************************************************************/
+
+.love {
+    margin: auto;
+    max-width: 480px;
+    height: 600px;
+    background-image: url(love.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#love {
+    font-size: 26px;
+    font-family: "Vrdznagir";
+}
+
+/*Ayan*/
+
+
+.b {
+    margin: auto;
+    max-width: 480px;
+    width: 100%;
+    height: 400px;
+    background-color: #5C2018;
+
+}
+
+.c {
+    margin: auto;
+    margin-top: -15%;
+    max-width: 400px;
+    height: 260px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0% 0% 5% 5%;
+}
+
+.ayan {
+    padding-top: 80px;
+    max-width: 380px;
+    width: 100%;
+    height: 250px;
+    color: #DEDAD5;
+    font-family: "Vrdznagir";
+    background-image: url(Mask.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 23px;
+    /* line-height: 100px; */
+    text-align: center;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(255, 255, 255, 0.05) 30%); */
+    /* transform: translateY(10%); */
+    z-index: 12;
+    margin: 0 auto;
+}
+
+.ayan>h2 {
+    margin: 0;
+}
+
+.logo {
+    width: 30%;
+    height: 70px;
+    margin: 0;
+}
+
+h6 {
+    font-family: "Noto Serif Armenian";
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    color: #A1A1AA63;
+}
+
+.foot {
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 1.5s 0.3s;
+}
+
+.foot.active {
+    transform: translateY(0%);
+    opacity: 1;
+}
